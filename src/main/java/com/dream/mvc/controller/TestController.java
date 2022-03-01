@@ -110,4 +110,11 @@ public class TestController {
 	public String obj(){
 		return "{name: 'dream',age:18}";
 	}
+
+	// java接口4 响应
+	@RequestMapping("/logout")
+	@ResponseBody
+	public String logout(){
+		return "实现退出功能";
+	}
 }
