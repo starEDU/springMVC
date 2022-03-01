@@ -110,4 +110,11 @@ public class TestController {
 	public String obj(){
 		return "{name: 'dream',age:18}";
 	}
+
+	// java接口3 响应
+	@RequestMapping("/login")
+	@ResponseBody
+	public String login(){
+		return "登录成功";
+	}
 }
