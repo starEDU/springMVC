@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<h1>测试页面</h1>
+
+<h2 th:text="${testData}"></h2>
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.26.0/axios.min.js"></script>
+
+<script>
+	axios(
+		{
+			url: 'http://localhost:8080/test/goods',
+			params: {username: 'admin', password: 'admin'},
+			headers: {
+				dream: 'custom headers field'
+			}
+		}
+	)
+		.then(res => {
+			console.log(res)
+		})
+		.then(err=>console.log(err))
+</script>
+</body>
+</html>
